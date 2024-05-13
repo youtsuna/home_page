@@ -1,0 +1,232 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ICONS */
+@import url("https://css.gg/css");
+
+/* GENERAL STYLES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* transition: all 0.5s; */
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: #fff;
+  /*   overflow: hidden; */
+  overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+  height: 10vh;
+  background-color: #343a40;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.nome-paginas {
+  height: 100%;
+  display: flex;
+  gap: 4.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nome-paginas li {
+  font-weight: 400;
+  color: #fff;
+  font-size: 2.4rem;
+  list-style-type: none;
+}
+
+.nome-paginas li::after {
+  content: "";
+  display: block;
+  background-color: #9775fa;
+  width: 100%;
+  transition: height 0.5s;
+}
+
+.nome-paginas li:hover::after {
+  margin-top: 0.2rem;
+  height: 0.4rem;
+}
+
+.link-home {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-projetos {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-contato {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main styles */
+main {
+  width: 100vw;
+  height: 70vh;
+}
+
+.projetos {
+  width: 100%;
+  height: 100%;
+  background-color: #24282c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+  overflow-y: scroll;
+}
+
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* flex: 1; */
+  margin: 2.4rem;
+}
+
+.projetos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  z-index: 1;
+  transition: transform 0.5s;
+  transform-origin: top center;
+}
+
+.gloss {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    226deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.4) 35%,
+    rgba(255, 255, 255, 0.2) 42%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transition: transform 0.5s cubic-bezier(0.18, 0.9, 0.58, 1);
+}
+
+.image-container:hover {
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+.image-container:hover .gloss {
+  transform: translateX(15%);
+}
+
+.gloss:hover {
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+.image-title {
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: #fff;
+  background-color: #9775fa;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.image-container:hover .image-title {
+  opacity: 1;
+}
+
+/* Footer styles */
+.footer {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  height: 20vh;
+  background-color: #343a40;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-content: center;
+  row-gap: 4.8rem;
+}
+
+.quote {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.quote span:hover {
+  color: #9775fa;
+}
+
+.github {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.github span {
+  color: #9775fa;
+}
+
+.github a {
+  color: #9775fa;
+  text-decoration: none;
+}
+
+.github a:hover {
+  color: #d0bfff;
+}
+
+.contato {
+  grid-column: 2;
+  grid-row: 1;
+}
+.paginas-footer {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.paginas-footer li {
+  list-style-type: none;
+}
+
+.paginas-footer a:hover {
+  color: #d0bfff;
+}
+
+.nome-paginas-footer {
+  display: flex;
+  gap: 3.2rem;
+}
