@@ -60,7 +60,7 @@ body {
   background-color: #9775fa;
   width: 100%;
   transition: height 0.5s;
-  background-image: url(./img/gif.gif);
+  background-image: url(./img/gif.gif) !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -190,7 +190,7 @@ body {
   background-color: #9775fa;
   width: 75%;
   height: 1rem;
-  background-image: url(./img/gif.gif);
+  background-image: url(./img/gif.gif) !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
