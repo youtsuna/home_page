@@ -1,2 +1,2 @@
 # home_page
-My personal home page to store college (IFTO) projects.
+My personal home page to store my projects.
